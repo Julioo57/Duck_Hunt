@@ -1,3 +1,4 @@
+/* page positionement    */
 *{
     margin:0;
     padding:0;
@@ -37,6 +38,7 @@ section{
     padding-block:1%;
     justify-content: center;
 }
+/* game playyyy */
 .game{
     width: 84%;
     border:15px solid #333;
@@ -55,9 +57,8 @@ section{
 .event_btn{
     display:block;
     width:15%;
-    background-color: aqua;
 }
-.restart_btn,.break_btn,.start_btn,.stop_btn{
+#restart_btn,#break_btn,#start_btn,#stop_btn{
     font-size:40px;
     padding-block:8%;
     margin:2%;
@@ -65,10 +66,10 @@ section{
     border-radius:5px;
     cursor:pointer;
 }
+/* scoreboard */
 .data{
-    margin-top:90%;
+    margin-top:70%;
     font-size:40px;
-    background-color: yellow;
     border-radius:5px;
 }
 .data div{
@@ -77,4 +78,10 @@ section{
 }
 .data span{
     padding:5%;
+}
+/* responsive */ 
+@media (max-width: 800px){
+    section{
+        display: block;
+    }
 }
