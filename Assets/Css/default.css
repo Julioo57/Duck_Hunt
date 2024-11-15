@@ -39,17 +39,19 @@ section{
     justify-content: center;
 }
 /* game playyyy */
-.game{
+.game {
     width: 84%;
-    border:15px solid #333;
-    border-radius:15px;
-    height:1300px;
+    border: 15px solid #333;
+    border-radius: 15px;
+    height: 1300px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url("Assets/Img/background_duck_hunt.gif");
-    cursor:crosshair;
+    position: relative; /* Important pour positionner les éléments enfants (canard) */
+    cursor: crosshair;
 }
+
 .Img_background{
     width:100%;
     height:100%;
@@ -69,8 +71,8 @@ section{
 /* scoreboard */
 #scoreboard {
     position: absolute;
-    top: 260px;
-    left: 45px;
+    top:10px;
+   left:10px;
     font-size: 24px;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
@@ -79,7 +81,8 @@ section{
   }
   .duck {
     position: absolute;
-    transition: left 0.5s, top 0.5s; /* Animation pour le déplacement de l'oie */
+    display: none;
+    transition: left 0.5s, top 0.5s, transform 0.3s; /* Animation pour le déplacement de l'oie */
     pointer-events: auto;
 }
 
