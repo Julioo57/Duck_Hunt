@@ -5,7 +5,22 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-header,footer{
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+header p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.play_game{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+footer{
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -58,7 +73,7 @@ section{
     display:block;
     width:15%;
 }
-#break_btn,#start_btn,#stop_btn{
+#restart_btn,#break_btn,#start_btn,#stop_btn{
     font-size:40px;
     padding-block:8%;
     margin:2%;
@@ -67,22 +82,18 @@ section{
     cursor:pointer;
 }
 /* scoreboard */
-#scoreboard {
-    position: absolute;
-    top: 260px;
-    left: 45px;
-    font-size: 24px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .duck {
-    position: absolute;
-    transition: left 0.5s, top 0.5s; /* Animation pour le déplacement de l'oie */
-    pointer-events: auto;
+.data{
+    margin-top:70%;
+    font-size:40px;
+    border-radius:5px;
 }
-
+.data div{
+    margin-block:20%;
+    margin-left:5%;
+}
+.duck_img{
+    display: none;
+}
 .data span{
     padding:5%;
 }

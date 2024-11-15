@@ -1,0 +1,31 @@
+let score = 0;
+const scoreDisplay = document.querySelector("score");
+const duck = document.querySelector("duck");
+
+// Fonction pour déplacer le canard
+function moveDuck() {
+  // Dimensions de la zone de jeu
+  const gameWidth = document.getElementById("game").offsetWidth;
+  const gameHeight = document.getElementById("game").offsetHeight;
+
+  // Position aléatoire pour le canard
+  const x = Math.random() * (gameWidth - 50); // Largeur du canard
+  const y = Math.random() * (gameHeight - 50); // Hauteur du canard
+
+  // Appliquer la nouvelle position
+  duck.style.left = `${x}px`;
+  duck.style.top = `${y}px`;
+}
+
+// Fonction de clic sur le canard
+duck.addEventListener("click", () => {
+  score++;
+  scoreDisplay.textContent = score;
+  moveDuck(); // Déplace le canard après un clic
+});
+
+// Déplacement initial du canard
+moveDuck();
+
+// Déplacer le canard automatiquement toutes les 1,5 secondes
+setInterval(moveDuck, 1500);
